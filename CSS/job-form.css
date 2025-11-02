@@ -1,0 +1,47 @@
+.form-section {
+  padding: 35px;
+  background: #eef3f8;
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+form {
+  background: #fff;
+  width: 350px;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+form input {
+  width: 92%;
+  padding: 10px;
+  margin: 6px 0;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background: #005ecb;
+}
+
+@media(max-width: 600px) {
+  form {
+    width: 90%;
+  }
+}

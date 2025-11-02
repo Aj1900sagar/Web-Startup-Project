@@ -1,0 +1,412 @@
+/* ===== GLOBAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e23744;   /* Red Theme */
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.08);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ffe6e6;
+}
+
+/* ===== MAIN HERO SECTION ===== */
+main {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+main img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    filter: brightness(50%);
+    transition: transform 8s ease-in-out;
+}
+
+main.animate-bg img {
+    transform: scale(1.1);
+}
+
+/* Text on Background */
+main p {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+    width: 90%;
+    animation: fadeIn 2s forwards;
+}
+
+/* Search Input */
+main input {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    font-size: 1rem;
+    background: #fff;
+    transition: 0.4s ease;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+}
+
+main input:focus {
+    width: 70%;
+    background: #ffffff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #e23744;
+    text-align: center;
+    color: white;
+    padding: 12px;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    letter-spacing: 0.4px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    main p {
+        font-size: 1.7rem;
+    }
+
+    main input {
+        width: 80%;
+    }
+}
+
+
+/* ////////////////////////////////////////////// */
+
+/* ===== JOB SECTION ===== */
+.jobs {
+  padding: 50px 80px;
+  background: #fff;
+}
+
+.jobs h2 {
+  text-align: center;
+  font-size: 35px;
+  color: #b00000;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* GRID  */
+.jobs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* JOB CARD DESIGN */
+.job-card {
+  background: #ffffff;
+  padding: 20px;
+  border: 2px solid #b00000;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 6px 18px rgba(176, 0, 0, 0.3);
+}
+
+.job-card h3 {
+  color: #b00000;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.job-card p {
+  margin: 3px 0;
+  color: #222;
+  font-size: 16px;
+}
+
+/* APPLY BUTTON */
+.job-card button {
+  width: 100%;
+  background: #5bca2f;
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.job-card button:hover {
+  background: black;
+}
+
+/* contact sections */
+/* ===== CONTACT SECTION MAIN STYLING ===== */
+.contact-section {
+  padding: 40px;
+  text-align: center;
+  background: #fff5f5;
+}
+
+.contact-section h2 {
+  color: #c70000;
+  font-size: 30px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+/* ===== CONTACT CARDS ===== */
+.contact-card {
+  background: white;
+  width: 280px;
+  margin: 12px;
+  padding: 18px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0px 3px 12px rgba(0,0,0,0.15);
+  transition: 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 18px rgba(0,0,0,0.25);
+}
+
+.contact-card h3 {
+  margin: 0;
+  font-size: 22px;
+  color: #222;
+}
+
+.contact-card p {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+/* ===== BUTTONS STYLING ===== */
+.call-btn, .whatsapp-btn {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.call-btn {
+  background: #c70000;
+}
+
+.call-btn:hover {
+  background: #a30000;
+}
+
+.whatsapp-btn {
+  background: #1ebd37;
+}
+
+.whatsapp-btn:hover {
+  background: #128e24;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width: 600px) {
+  .contact-card {
+    width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* multilanguage support */
+.lang-buttons button {
+  padding: 6px 12px;
+  border: none;
+  margin: 3px;
+  background: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lang-buttons button:hover {
+  background: #005fcc;
+}
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.team-card {
+    width: 230px;
+    text-align: center;   /* ✅ Centers text & image */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.team-card img {
+    display: block;
+    margin: auto;        /* ✅ Perfectly centers image */
+    width: 100px;
+    height: 100px;       /* ✅ Same size for all */
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 12px;
+}
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+.team-card img {
+    border: 4px solid #1e88e5;
+}
+
+
+
+
+
+
+
+/* ////////////////////////////////////////////// */
+/* ===== JOB FORM STYLING ===== */
+.jobs {
+  padding: 30px;
+  text-align: center;
+  background: #f7faff;
+}
+
+.jobs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  padding: 20px;
+}
+
+.job-card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: .3s;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.job-card button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #25D366;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.job-card button:hover {
+  background: #1faa55;
+}
+
+.job-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}

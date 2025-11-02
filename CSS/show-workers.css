@@ -1,0 +1,29 @@
+.worker-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.worker-card {
+  background:#fff;
+  width: 250px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.worker-card h3 {
+  margin: 0;
+}
+
+.worker-card button {
+  background:green;
+  color:#fff;
+  width:100%;
+  border:none;
+  padding:10px;
+  border-radius:6px;
+  cursor:pointer;
+}
