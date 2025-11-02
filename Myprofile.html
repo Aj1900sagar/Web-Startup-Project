@@ -1,0 +1,98 @@
+<!-- ✅ MY PROFILE SECTION -->
+<section class="profile-section">
+  <h2 data-key="myProfile">My Profile</h2>
+
+  <div class="profile-box">
+    <label data-key="fullName">Full Name</label>
+    <input type="text" placeholder="Enter your full name">
+
+    <label data-key="skill">Skill / Work Category</label>
+    <input type="text" placeholder="Example: Electrician, Plumber, Painter">
+
+    <label data-key="experience">Experience</label>
+    <input type="text" placeholder="Example: 2 Years">
+
+    <label data-key="location">Location</label>
+    <input type="text" placeholder="City / Area">
+
+    <label data-key="phone">Phone Number</label>
+    <input type="text" placeholder="Enter phone number">
+
+    <button class="save-profile" data-key="saveProfile">Save Profile</button>
+  </div>
+</section>
+
+
+<!-- css fo this page only  -->
+<style>
+    .profile-section {
+  width: 80%;
+  margin: 50px auto;
+  background: #e9f2ff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+}
+
+.profile-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  font-size: 16px;
+}
+
+.save-profile {
+  margin-top: 15px;
+  padding: 12px;
+  background: #1e88e5;
+  color: white;
+  border: none;
+  font-size: 17px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-profile:hover {
+  background: #0d6cc4;
+}
+
+</style>
+
+<!-- ✅ JAVASCRIPT: PROFILE DATA -->
+<script>
+  // Save Profile Data to Local Storage
+  document.querySelector('.save-profile').addEventListener('click', function() {
+    const profileData = {
+      fullName: document.querySelector('.profile-box input:nth-of-type(1)').value,
+      skill: document.querySelector('.profile-box input:nth-of-type(2)').value,
+      experience: document.querySelector('.profile-box input:nth-of-type(3)').value,
+      location: document.querySelector('.profile-box input:nth-of-type(4)').value,
+      phone: document.querySelector('.profile-box input:nth-of-type(5)').value,
+    };
+    localStorage.setItem('workerProfile', JSON.stringify(profileData));
+    alert('Profile Saved Successfully!');
+  });
+
+  // Load Profile Data from Local Storage
+  window.onload = function() {
+    const savedProfile = JSON.parse(localStorage.getItem('workerProfile'));
+    if (savedProfile) {
+      document.querySelector('.profile-box input:nth-of-type(1)').value = savedProfile.fullName;
+      document.querySelector('.profile-box input:nth-of-type(2)').value = savedProfile.skill;
+      document.querySelector('.profile-box input:nth-of-type(3)').value = savedProfile.experience;
+      document.querySelector('.profile-box input:nth-of-type(4)').value = savedProfile.location;
+      document.querySelector('.profile-box input:nth-of-type(5)').value = savedProfile.phone;
+    }
+  };

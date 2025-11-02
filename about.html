@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – KaamSaathi</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <style>
+        /* ===== TEAM / ABOUT SECTION FIX ===== */
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 30px;
+}
+
+.team-card {
+    width: 230px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ✅ This part perfectly centers the image */
+.team-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 14px auto;
+    display: block;
+    border: 4px solid #1e88e5;  /* optional */
+}
+
+/* Hover Animation (looks professional) */
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 18px rgba(0,0,0,0.15);
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h2 data-key="aboutTitle">About KaamSaathi</h2>
+
+    <!-- ✅ Language Buttons -->
+    <div class="lang-buttons">
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('hi')">हिन्दी</button>
+    </div>
+</header>
+
+
+<section class="about">
+    <p data-key="aboutDesc">
+        KaamSaathi is a platform created to help daily wage workers find jobs easily.
+        We connect workers, contractors, shop owners and companies so that earning money becomes simple.
+    </p>
+</section>
+
+
+<section class="mission">
+    <h2 data-key="missionHeading">Our Mission</h2>
+    <ul>
+        <li data-key="m1">✅ Provide easy job access to daily wage workers</li>
+        <li data-key="m2">✅ Fair wages & no harassment</li>
+        <li data-key="m3">✅ Digital support for workers who don't use technology</li>
+        <li data-key="m4">✅ Bridge between employers & workers</li>
+    </ul>
+</section>
+
+
+<section class="team">
+    <h2 data-key="teamHeading">Meet Our Team</h2>
+
+    <div class="team-container">
+
+        <div class="team-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png">
+            <h3 data-key="sagar">Sagar Kumar</h3>
+            <p data-key="sagarRole">Founder & Developer</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922561.png">
+            <h3 data-key="rahul">Rahul Singh</h3>
+            <p data-key="rahulRole">UI/UX Designer</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2922/2922656.png">
+            <h3 data-key="priya">Priya Sharma</h3>
+            <p data-key="priyaRole">Marketing & Operations</p>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="founder-message">
+    <h2 data-key="founderMsgHeading">Message From Founder</h2>
+    <p data-key="founderMsg">
+        “Millions of skilled workers don’t get work on time.
+        KaamSaathi is built to solve this problem. 
+        We believe everyone deserves respect, fair wages, and opportunities.”
+    </p>
+</section>
+
+
+<section class="timeline">
+    <h2 data-key="journey">Our Journey</h2>
+
+    <div class="timeline-item" data-key="t1">🚀 2024 – Idea Started</div>
+    <div class="timeline-item" data-key="t2">🛠 2025 – Website Launched</div>
+    <div class="timeline-item" data-key="t3">📱 Coming Soon – Mobile App</div>
+</section>
+
+
+<footer data-key="footer">
+    Copyright © 2030 KaamSaathi. All rights reserved.
+</footer>
+
+
+<!-- ✅ Language Script -->
+<script>
+const text = {
+    en: {
+        aboutTitle: "About KaamSaathi",
+        aboutDesc: "KaamSaathi is a platform created to help daily wage workers find jobs easily. We connect workers, contractors, shop owners and companies so that earning money becomes simple.",
+        missionHeading: "Our Mission",
+        m1: "✅ Provide easy job access to daily wage workers",
+        m2: "✅ Fair wages & no harassment",
+        m3: "✅ Digital support for workers who don't use technology",
+        m4: "✅ Bridge between employers & workers",
+        teamHeading: "Meet Our Team",
+        sagar: "Sagar Kumar",
+        sagarRole: "Founder & Developer",
+        rahul: "Rahul Singh",
+        rahulRole: "UI/UX Designer",
+        priya: "Priya Sharma",
+        priyaRole: "Marketing & Operations",
+        founderMsgHeading: "Message From Founder",
+        founderMsg: "“Millions of skilled workers don’t get work on time. KaamSaathi is built to solve this problem. We believe everyone deserves respect, fair wages, and opportunities.”",
+        journey: "Our Journey",
+        t1: "🚀 2024 – Idea Started",
+        t2: "🛠 2025 – Website Launched",
+        t3: "📱 Coming Soon – Mobile App",
+        footer: "Copyright © 2030 KaamSaathi. All rights reserved."
+    },
+
+    hi: {
+        aboutTitle: "KaamSaathi के बारे में",
+        aboutDesc: "KaamSaathi एक ऐसा प्लेटफॉर्म है जो रोज़ाना मजदूरी करने वाले लोगों को आसानी से काम दिलाने में मदद करता है। हम कामगारों, कॉन्ट्रैक्टर, दुकान मालिकों और कंपनियों को जोड़ते हैं ताकि कमाई आसान हो सके।",
+        missionHeading: "हमारा लक्ष्य",
+        m1: "✅ रोज़गार तक आसान पहुँच",
+        m2: "✅ उचित मजदूरी और बिना उत्पीड़न",
+        m3: "✅ उन लोगों की मदद जो टेक्नोलॉजी कम इस्तेमाल करते हैं",
+        m4: "✅ नियोक्ता और मजदूरों के बीच पुल",
+        teamHeading: "हमारी टीम",
+        sagar: "Sagar Kumar",
+        sagarRole: "संस्थापक एवं डेवलपर",
+        rahul: "Rahul Singh",
+        rahulRole: "UI/UX डिज़ाइनर",
+        priya: "Priya Sharma",
+        priyaRole: "मार्केटिंग एवं संचालन",
+        founderMsgHeading: "संस्थापक का संदेश",
+        founderMsg: "“लाखों मजदूर समय पर काम नहीं पाते। KaamSaathi इसी समस्या को हल करने के लिए बनाया गया है। हम मानते हैं कि हर व्यक्ति को सम्मान, उचित मजदूरी और अवसर मिलना चाहिए।”",
+        journey: "हमारी यात्रा",
+        t1: "🚀 2024 – विचार की शुरुआत",
+        t2: "🛠 2025 – वेबसाइट लॉन्च",
+        t3: "📱 जल्द ही – मोबाइल ऐप",
+        footer: "कॉपीराइट © 2030 KaamSaathi. सभी अधिकार सुरक्षित।"
+    }
+};
+
+function setLanguage(lang) {
+    document.querySelectorAll("[data-key]").forEach(el => {
+        el.innerText = text[lang][el.getAttribute("data-key")];
+    });
+}
+</script>
+
+
+<!-- ✅ Scroll Animation -->
+<script>
+    const sections = document.querySelectorAll("section");
+    window.addEventListener("scroll", () => {
+        sections.forEach(sec => {
+            let pos = sec.getBoundingClientRect().top;
+            if (pos < window.innerHeight - 100) {
+                sec.classList.add("show");
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

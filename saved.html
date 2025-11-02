@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Jobs & Workers</title>
+    <link rel="stylesheet" href="CSS/saved.css">
+</head>
+<body>
+
+    <section class="saved-section">
+        <h2>📌 Saved Jobs & Workers</h2>
+
+        <!-- ✅ Filters -->
+        <div class="filters">
+            <input type="text" id="searchInput" placeholder="Search by name, job, location...">
+            <select id="skillFilter">
+                <option value="">All Skills</option>
+                <option value="Plumber">Plumber</option>
+                <option value="Painter">Painter</option>
+                <option value="Electrician">Electrician</option>
+                <option value="Carpenter">Carpenter</option>
+                <option value="Security">Security</option>
+                <option value="Construction">Construction Worker</option>
+            </select>
+
+            <button id="downloadPDF">⬇ Download PDF</button>
+            <button id="sendEmail">📧 Email Saved List</button>
+        </div>
+
+        <!-- ✅ Table -->
+        <table id="savedTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Skill</th>
+                    <th>Experience</th>
+                    <th>Location</th>
+                    <th>Contact</th>
+                </tr>
+            </thead>
+            <tbody id="savedData"></tbody>
+        </table>
+    </section>
+
+    <script src="Js/saved.js"></script>
+</body>
+</html>

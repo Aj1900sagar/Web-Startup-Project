@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup - KaamSaathi</title>
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="Logo.png" alt="KaamSaathi Logo">
+  </div>
+
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="services.html">Our Services</a></li>
+    <li><a href="signup.html" style="color: #ff9800;">Signup</a></li>
+  </ul>
+</header>
+
+<section class="signup-box">
+  <h2>Create Your Account</h2>
+
+  <form>
+
+    <!-- ✅ USER TYPE SELECTION -->
+    <label class="role-label">I am signing up as:</label>
+    <div class="role-select">
+      <label>
+        <input type="radio" name="role" value="Worker" required>
+        Worker
+      </label>
+      <label>
+        <input type="radio" name="role" value="Employer" required>
+        Employer
+      </label>
+    </div>
+
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Mobile Number" required>
+    <input type="email" placeholder="Email" required>
+    <input type="password" placeholder="Create Password" required>
+
+    <button type="submit">Signup</button>
+  </form>
+
+  <p>Already have an account? <a href="login.html">Login</a></p>
+</section>
+
+<style>
+.signup-box {
+  width: 350px;
+  margin: 60px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.signup-box input {
+  width: 92%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ✅ ROLE SELECT STYLING */
+.role-label {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.role-select {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.role-select label {
+  font-size: 14px;
+}
+
+.signup-box button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #2196F3;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.signup-box button:hover {
+  background: #0b7dda;
+}
+
+.signup-box {
+  animation: fadeIn 0.9s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+</style>
+
+
+<script>
+// ✅ Highlight selected role
+const roleInputs = document.querySelectorAll("input[name='role']");
+roleInputs.forEach(input => {
+  input.addEventListener("change", () => {
+    roleInputs.forEach(r => r.parentElement.style.fontWeight = "normal");
+    input.parentElement.style.fontWeight = "bold";
+  });
+});
+
+// ✅ Simple form validation pop-up
+document.querySelector("form").addEventListener("submit", function(e){
+  e.preventDefault();
+  
+  const role = document.querySelector("input[name='role']:checked");
+  const name = document.querySelector("input[placeholder='Full Name']").value;
+  const phone = document.querySelector("input[placeholder='Mobile Number']").value;
+  const email = document.querySelector("input[placeholder='Email']").value;
+  const pass = document.querySelector("input[placeholder='Create Password']").value;
+
+  if(!role || !name || !phone || !email || !pass){
+    alert("Please fill all fields ✅");
+    return;
+  }
+
+  alert("Signup Successful ✅");
+});
+</script>
+
+
+</body>
+</html>
